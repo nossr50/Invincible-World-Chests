@@ -1,0 +1,8 @@
+name: ${projectNameVar}
+main: com.gmail.nossr50.invincibleworldchests.InvincibleWorldChests
+description: Prevent destruction of world chests
+version: ${project.version}
+author: ${projectAuthor}
+website: ${projectWebsite}
+load: STARTUP
+api-version: 1.13
