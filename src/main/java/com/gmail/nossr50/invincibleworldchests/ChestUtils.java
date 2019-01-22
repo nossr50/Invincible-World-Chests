@@ -6,7 +6,7 @@ import org.bukkit.loot.Lootable;
 
 public class ChestUtils {
 
-    public static void preventBreakingLootableInventoryBlock(InventoryHolder inventoryHolder, Cancellable event) {
+    public static void preventBreakingInventoryWithLootTable(InventoryHolder inventoryHolder, Cancellable event) {
         if(inventoryHolder instanceof Lootable)
         {
             Lootable lootable = (Lootable) inventoryHolder;

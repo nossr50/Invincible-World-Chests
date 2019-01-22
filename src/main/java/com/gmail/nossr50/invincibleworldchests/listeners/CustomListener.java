@@ -29,7 +29,7 @@ public class CustomListener implements Listener {
     public void onBlockBreakEvent(BlockBreakEvent event)
     {
         if(event.getBlock().getState() instanceof InventoryHolder)
-            ChestUtils.preventBreakingLootableInventoryBlock((InventoryHolder) event.getBlock().getState(), event);
+            ChestUtils.preventBreakingInventoryWithLootTable((InventoryHolder) event.getBlock().getState(), event);
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
@@ -39,7 +39,7 @@ public class CustomListener implements Listener {
         {
             Block block = (Block) event.getEntity();
             if(block.getState() instanceof InventoryHolder)
-                ChestUtils.preventBreakingLootableInventoryBlock((InventoryHolder) block.getState(), event);
+                ChestUtils.preventBreakingInventoryWithLootTable((InventoryHolder) block.getState(), event);
         }
     }
 
@@ -49,7 +49,7 @@ public class CustomListener implements Listener {
         if(event.getVehicle() instanceof InventoryHolder)
         {
             //Minecarts
-            ChestUtils.preventBreakingLootableInventoryBlock((InventoryHolder) event.getVehicle(), event);
+            ChestUtils.preventBreakingInventoryWithLootTable((InventoryHolder) event.getVehicle(), event);
         }
     }
 
@@ -66,6 +66,6 @@ public class CustomListener implements Listener {
     public void onBlockDamageEvent(BlockDamageEvent event)
     {
         if(event.getBlock().getState() instanceof InventoryHolder)
-            ChestUtils.preventBreakingLootableInventoryBlock((InventoryHolder) event.getBlock().getState(), event);
+            ChestUtils.preventBreakingInventoryWithLootTable((InventoryHolder) event.getBlock().getState(), event);
     }
 }
